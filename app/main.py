@@ -31,8 +31,7 @@ def main():
 
     chat = client.chat.completions.create(
         model="gpt-5.4-nano",
-        messages=[{"role": "user", "content": args.p}],
-        tools= [read_tool]
+        messages=[{"role": "user", "content": args.p}]
     )
 
     if not chat.choices or len(chat.choices) == 0:
